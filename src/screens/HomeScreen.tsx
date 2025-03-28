@@ -7,7 +7,9 @@ import { HeaderContainer, HeaderTitle } from '../components/Header';
 import theme from '../styles/theme';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Appointment, RootStackParamList, Doctor } from '../types';
+import { Appointment } from '../types/appointments';
+import { Doctor } from '../types/doctors';
+import { RootStackParamList } from '../types/navigation';
 import { useFocusEffect } from '@react-navigation/native';
 
 type HomeScreenProps = {
@@ -17,15 +19,15 @@ type HomeScreenProps = {
 const doctors: Doctor[] = [
   {
     id: '1',
-    name: 'Dr. João Silva',
+    name: 'Dr. Antônio Fagundes',
     specialty: 'Cardiologista',
-    image: 'https://mighty.tools/mockmind-api/content/human/91.jpg',
+    image: 'https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2022/07/05215152/Antonio-Fagundes-Globo.jpg',
   },
   {
     id: '2',
-    name: 'Dra. Maria Santos',
+    name: 'Dra. Fernanda Torres',
     specialty: 'Dermatologista',
-    image: 'https://mighty.tools/mockmind-api/content/human/97.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS64tjml41HA43ZDLPW4iu8kQICF3mg5PJYA&s',
   },
   {
     id: '3',
